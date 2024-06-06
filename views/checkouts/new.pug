@@ -20,6 +20,34 @@ block content
       button.button(type="submit")
         span Test Transaction
 
+    form.container(action="javascript:void(0)")
+      .row
+        .col-xs-12
+          table.table
+            tr
+              th Field
+              th Value
+            tr
+              td Number (successful with no challenge)
+              td 4000000000001000
+            tr
+              td Number (successful with challenge)
+              td 4000000000001091
+            tr
+              td Number (unsuccessful with challenge)
+              td 4000000000001109
+            tr
+              td Expiration Date (for sandbox testing, year must be exactly 3 years in the future)
+              td 12/25
+            tr
+              td CVV
+              td 123
+            tr
+              td Postal Code
+              td 12345
+
+      
+
   span(hidden id="client-token")=clientToken
 
   script(src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js")

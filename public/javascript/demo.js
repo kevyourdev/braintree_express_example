@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+function demo() {
   var amount = document.querySelector('#amount');
   var amountLabel = document.querySelector('label[for="amount"]');
   var form = document.querySelector('#payment-form');
@@ -47,4 +47,6 @@
       });
     }
   );
-})();
+}
+
+demo();
